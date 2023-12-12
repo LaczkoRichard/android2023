@@ -12,6 +12,9 @@ data class RecipeDTO(
 
     @SerializedName("thumbnail_url")
     val thumbnailUrl: String? = "",
+
+    @SerializedName("original_video_url")
+    val originalVideoUrl: String? = ""
 )
 
 fun RecipeDTO.toModel(): RecipeModel =
@@ -21,6 +24,7 @@ fun RecipeDTO.toModel(): RecipeModel =
         description = this.description,
         instruction = this.instructions.toModelList(),
         thumbnailUrl = this.thumbnailUrl,
+        originalVideoUrl = this.originalVideoUrl
     )
 
 fun List<RecipeDTO>.toModelList(): List<RecipeModel> =

@@ -77,6 +77,9 @@ class RecipeDetailFragment : Fragment() {
                 instructionCounter += 1
             }
 
+            val webView = view.findViewById<android.webkit.WebView>(R.id.videoWebView)
+            it.originalVideoUrl?.let { it1 -> webView.loadUrl(it1) }
+
         }
     }
     override fun onCreateView(

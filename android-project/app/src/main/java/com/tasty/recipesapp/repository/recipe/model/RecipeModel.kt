@@ -7,4 +7,5 @@ data class RecipeModel(
     val description: String? = "Default description",
     val instruction: List<InstructionModel>,
     val thumbnailUrl: String? = "",
+    val originalVideoUrl: String? = ""
 )
